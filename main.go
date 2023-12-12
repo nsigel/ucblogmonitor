@@ -40,7 +40,7 @@ func watch() {
 		log.Panic(err)
 	}
 
-	interval := time.Minute * 1
+	interval := time.Minute * 3
 
 	for {
 		log.Printf("Sleeping for %.0f minutes...", interval.Minutes())
@@ -73,6 +73,7 @@ func embed(post blog.Post) discord.Embed {
 			Name: "University of Chicago Uncommon Blog",
 			URL:  "https://collegeadmissions.uchicago.edu/uncommon-blog",
 		},
+
 		Footer: &discord.EmbedFooter{
 			Text:    "UChicago Blog Monitor",
 			IconURL: "https://biocars.uchicago.edu/wp-content/uploads/2019/05/cropped-logo.png",
